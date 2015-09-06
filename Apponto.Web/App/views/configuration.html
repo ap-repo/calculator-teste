@@ -1,0 +1,9 @@
+﻿<tabset justified="true">
+    <tab ng-repeat="configurationMenu in configurationMenuList | orderBy : 'order' : false"
+         heading="{{configurationMenu.Name}}"
+         select="go(configurationMenu.Route)"
+         active="configurationMenu.Active">
+    </tab>
+</tabset>
+
+<div ui-view></div>

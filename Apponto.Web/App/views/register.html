@@ -1,0 +1,32 @@
+﻿<ul class="timeline">
+    <li ng-class="{'timeline-inverted' : record.Action.Id == 2 || record.Action.Id == 4 }" ng-repeat="record in records">
+        <div class="timeline-badge" ng-class="{ 'success': record.Action.Id == 1 || record.Action.Id == 3, 'warning': record.Action.Id == 2, 'danger' : record.Action.Id == 4 }">
+            <i class="fa" ng-class="{ 'fa-circle-o': record.Action.Id == 1, 'fa-pause': record.Action.Id == 2, 'fa-play': record.Action.Id == 3,  'fa-circle' : record.Action.Id == 4 }">
+            </i>
+        </div>
+        <div class="timeline-panel">
+            <div class="timeline-heading">
+                <h4 class="timeline-title">{{record.Action.Name}}</h4>
+                <p><small class="text-muted"><i class="fa fa-clock-o"></i> Há {{record.HourAgo}} horas</small></p>
+            </div>
+            <div class="timeline-body">
+                <p>{{record.DateFormatedHourMinute}}</p>
+            </div>
+        </div>
+    </li>
+</ul>
+
+<nav class="navbar-form navbar-fixed-bottom">
+    <div class="btn-group btn-group-lg btn-group-fixed-bottom col-xs-12 col-lg-12">
+        <button type="button" ng-repeat="currentButton in registerButtons  | orderBy : 'order' : false"
+                class="btn btn-default col-xs-4 col-lg-4"
+                ng-class="{'btn-success': currentButton.Clicked }"
+                ng-click="saveRegister(currentButton.Action)"
+                ng-show="currentButton.Visible"
+                ng-disabled="currentButton.Disabled">
+            {{currentButton.Name}}
+        </button>
+        <!--<button type="button" class="btn btn-default col-xs-4 col-lg-4" ng-click="saveRegister(2)">Pausa</button>
+        <button type="button" class="btn btn-default col-xs-4 col-lg-4" ng-click="saveRegister(4)">Saída</button>-->
+    </div>
+</nav>

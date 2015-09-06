@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="appontoWeb">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <title>Apponto</title>
+
+    <!--JAVASCRIPTS-->
+    <script src="references/javascripts/jquery-2.1.3.min.js"></script>
+    <script src="references/javascripts/lodash.min.js"></script>
+    <script src="references/javascripts/angular.js"></script>
+    <script src="references/javascripts/angular-resource.js"></script>
+    <script src="references/javascripts/angular-ui-router.min.js"></script>
+    <script src="references/javascripts/angular-cookies.min.js"></script>
+    <script src="references/javascripts/angular-touch.min.js"></script>
+    <script src="references/javascripts/angular-animate.js"></script>
+    <script src="references/javascripts/bootstrap.min.js"></script>
+    <script src="references/javascripts/ui-bootstrap-tpls-0.13.0.min.js"></script>
+    <script src="references/javascripts/jquery.storageapi.js"></script>
+    <script src="references/javascripts/angular-google-maps.min.js"></script>
+    <script src="references/javascripts/loading-bar.js"></script>
+    <script src="references/javascripts/moment.js"></script>
+    <script src="references/javascripts/checklist-model.js"></script>
+    <script src="references/javascripts/toaster.js"></script>
+
+    <script src="app.js"></script>
+    <script src="controllers/registerController.js"></script>
+    <script src="controllers/reportController.js"></script>
+    <script src="controllers/configurationController.js"></script>
+    <script src="controllers/configurationProfileController.js"></script>
+    <script src="controllers/configurationEmployeeController.js"></script>
+    <script src="controllers/configurationPermissionController.js"></script>
+    <script src="controllers/loginController.js"></script>
+    <script src="controllers/signUpController.js"></script>
+    <script src="controllers/signInController.js"></script>
+    <script src="controllers/logoutController.js"></script>
+    <script src="controllers/userRestrictionController.js"></script>
+    <script src="controllers/userAccessLevelController.js"></script>
+    <script src="controllers/locationController.js"></script>
+    <script src="controllers/userController.js"></script>
+
+    <!--STYLESHEETS-->
+    <!--<link href="references/stylesheets/bootstrap-theme.css" rel="stylesheet" />--> <!--voltar essa linha caso use o layout padrão do bootstrap-->
+    <link href="references/stylesheets/bootstrap.min.css" rel="stylesheet" />
+    <link href="references/stylesheets/font-awesome.min.css" rel="stylesheet" />
+    <link href="references/stylesheets/loading-bar.css" rel="stylesheet" />
+    <link href="references/stylesheets/toaster.css" rel="stylesheet" />
+
+    <link href="references/stylesheets/apponto.css" rel="stylesheet" />
+    <link href="references/stylesheets/animations/ng-view-animation.css" rel="stylesheet" />
+
+</head>
+<body>
+    <toaster-container toaster-options="{'time-out': 3000, 'close-button':true, 'position-class': 'toast-top-full-width'}" style="top: 10px;"></toaster-container>
+    <div ng-controller="BaseController">
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Apponto <small></small></a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li ng-repeat="baseMenu in baseMenuList | orderBy : 'order' : false" style="cursor: pointer;"  data-toggle="menu"> <!--ng-class="{'active': baseMenu.Active }"-->
+                            <a ng-click="go(baseMenu)"><i class="{{baseMenu.Icon}}"></i> {{baseMenu.Name}}</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+        <div id="containerView" class="container-fluid" data-ng-animate="{enter: 'view-enter', leave: 'view-leave'}" ui-view>
+        </div>
+        <div id="generalError" class="modal bs-example-modal-sm" tabindex="-1" aria-hidden="true" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title">Error</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Generic error. Try again later.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

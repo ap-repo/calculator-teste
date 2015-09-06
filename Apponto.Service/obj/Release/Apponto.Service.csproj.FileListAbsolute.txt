@@ -1,0 +1,14 @@
+C:\Desenvolvimento\Junior\Faculdade\Apponto\Apponto\Apponto.Service\bin\Release\Apponto.Service.dll.config
+C:\Desenvolvimento\Junior\Faculdade\Apponto\Apponto\Apponto.Service\bin\Release\Apponto.Service.dll
+C:\Desenvolvimento\Junior\Faculdade\Apponto\Apponto\Apponto.Service\bin\Release\Apponto.Service.pdb
+C:\Desenvolvimento\Junior\Faculdade\Apponto\Apponto\Apponto.Service\bin\Release\Apponto.Database.dll
+C:\Desenvolvimento\Junior\Faculdade\Apponto\Apponto\Apponto.Service\bin\Release\Apponto.Model.dll
+C:\Desenvolvimento\Junior\Faculdade\Apponto\Apponto\Apponto.Service\bin\Release\EntityFramework.dll
+C:\Desenvolvimento\Junior\Faculdade\Apponto\Apponto\Apponto.Service\bin\Release\EntityFramework.SqlServer.dll
+C:\Desenvolvimento\Junior\Faculdade\Apponto\Apponto\Apponto.Service\bin\Release\Apponto.Database.pdb
+C:\Desenvolvimento\Junior\Faculdade\Apponto\Apponto\Apponto.Service\bin\Release\Apponto.Model.pdb
+C:\Desenvolvimento\Junior\Faculdade\Apponto\Apponto\Apponto.Service\bin\Release\EntityFramework.xml
+C:\Desenvolvimento\Junior\Faculdade\Apponto\Apponto\Apponto.Service\bin\Release\EntityFramework.SqlServer.xml
+C:\Desenvolvimento\Junior\Faculdade\Apponto\Apponto\Apponto.Service\obj\Release\Apponto.Service.csprojResolveAssemblyReference.cache
+C:\Desenvolvimento\Junior\Faculdade\Apponto\Apponto\Apponto.Service\obj\Release\Apponto.Service.dll
+C:\Desenvolvimento\Junior\Faculdade\Apponto\Apponto\Apponto.Service\obj\Release\Apponto.Service.pdb

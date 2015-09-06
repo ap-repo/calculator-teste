@@ -1,0 +1,63 @@
+﻿<br />
+<div class="row">
+    <form class="form-horizontal" name="signin_form" role="form" ng-submit="signIn()" novalidate>
+        <div class="form-group">
+            <label class="col-md-2 control-label">Email:</label>
+            <div class="col-md-8" ng-class="{ 'has-error' :
+                 (signin_form.email.$dirty && signin_form.email.$invalid && !signin_form.email.$focused)
+                 ||
+                 (signin_form.email.$touched && signin_form.email.$error.required && !signin_form.email.$focused) }">
+                <input class="form-control" name="email" ng-model="user.Email" type="email" value="" required ng-focus>
+                <p ng-show="signin_form.email.$touched && signin_form.email.$error.required && !signin_form.email.$focused" class="help-block">O campo Email é obrigatório.</p>
+                <p ng-show="signin_form.email.$dirty && signin_form.email.$invalid && !signin_form.email.$focused" class="help-block">Informe um Email válido.</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-2 control-label">Senha:</label>
+            <div class="col-md-8" ng-class="{ 'has-error' :
+                 (signin_form.password.$touched && signin_form.password.$error.required && !signin_form.password.$focused)
+                 ||
+                 (signin_form.password.$dirty && signin_form.password.$error.minlength && !signin_form.password.$focused)
+                 ||
+                 (signin_form.password.$dirty && signin_form.password.$error.maxlength && !signin_form.password.$focused) }">
+                <input class="form-control" name="password" ng-model="user.Password" type="password" value="" ng-minlength="4" ng-maxlength="8" required ng-focus>
+                <p ng-show="signin_form.password.$touched && signin_form.password.$error.required && !signin_form.password.$focused" class="help-block">O campo Senha é obrigatório.</p>
+                <p ng-show="signin_form.password.$dirty && signin_form.password.$error.minlength && !signin_form.password.$focused" class="help-block">O campo Senha deve conter no mínimo 4 caracteres.</p>
+                <p ng-show="signin_form.password.$dirty && signin_form.password.$error.maxlength && !signin_form.password.$focused" class="help-block">O campo Senha deve conter no máximo 8 caracteres.</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-2"></div>
+            <div class="checkbox col-md-10">
+                <label class="control-label">
+                    <input ng-model="user.savePassword" type="checkbox" />Mantenha-me conectado
+                </label>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <input type="submit" class="btn btn-success btn-block" value="Entrar">
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8 login-or">
+        <hr class="hr-or">
+        <span class="span-or">ou</span>
+    </div>
+</div>
+
+<div class="row">
+    <form class="form-horizontal" role="form">
+        <div class="form-group">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <input type="button" class="btn btn-primary  btn-block" value="Entrar com Google">
+            </div>
+        </div>
+    </form>
+</div>

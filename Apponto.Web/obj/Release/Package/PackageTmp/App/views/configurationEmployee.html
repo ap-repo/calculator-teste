@@ -1,0 +1,12 @@
+﻿<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Funcionário</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="employee in employees" ng-click="selectEmployee({{employee.Id}});" style="cursor:pointer;">
+            <td class="col-md-12">{{employee.Email}}</td>
+        </tr>
+    </tbody>
+</table>

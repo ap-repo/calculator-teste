@@ -1,0 +1,107 @@
+﻿<br />
+<div class="row">
+    <!-- left column -->
+    <div class="col-md-3">
+        <div class="text-center">
+            <img src="//placehold.it/100" class="avatar img-circle" alt="avatar">
+            <h6>Upload a different photo...</h6>
+
+            <input type="file" class="form-control">
+        </div>
+    </div>
+
+    <!-- edit form column -->
+    <div class="col-md-9">
+        <h3>Informações pessoais</h3>
+
+        <form class="form-horizontal" role="form">
+            <div class="form-group">
+                <label class="col-lg-3 control-label">Nome:</label>
+                <div class="col-lg-8">
+                    <input class="form-control" ng-model="user.Name" type="text">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-lg-3 control-label">Sobrenome:</label>
+                <div class="col-lg-8">
+                    <input class="form-control" ng-model="user.LastName" type="text">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-lg-3 control-label">Registro de empresa:</label>
+                <div class="col-lg-8">
+                    <input class="form-control" ng-model="user.Identification" type="number">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-3 control-label"></label>
+                <div class="col-md-8">
+                    <input type="button" class="btn btn-primary btn-block" ng-click="savePersonalInformation()" value="Salvar">
+                </div>
+            </div>
+        </form>
+
+        <h3>Informações de acesso</h3>
+
+        <form class="form-horizontal" name="profile_form" role="form" ng-submit="saveAccessInformation()" novalidate>
+            <div class="form-group">
+                <label class="col-lg-3 control-label">E-mail:</label>
+                <div class="col-lg-8">
+                    <input class="form-control" type="email" value="{{user.Email}}" disabled>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-3 control-label">Senha atual:</label>
+                <div class="col-md-8" ng-class="{ 'has-error' :
+                 (profile_form.oldpassword.$touched && profile_form.oldpassword.$error.required && !profile_form.oldpassword.$focused)
+                 ||
+                 (profile_form.oldpassword.$dirty && profile_form.oldpassword.$error.minlength && !profile_form.oldpassword.$focused)
+                 ||
+                 (profile_form.oldpassword.$dirty && profile_form.oldpassword.$error.maxlength && !profile_form.oldpassword.$focused) }">
+                    <input class="form-control" ng-model="user.OldPassword" name="oldpassword" type="password" value="" ng-minlength="4" ng-maxlength="8" required ng-focus>
+                    <p ng-show="profile_form.oldpassword.$touched && profile_form.oldpassword.$error.required && !profile_form.oldpassword.$focused" class="help-block">O campo Senha atual é obrigatório.</p>
+                    <p ng-show="profile_form.oldpassword.$dirty && profile_form.oldpassword.$error.minlength && !profile_form.oldpassword.$focused" class="help-block">O campo Senha atual deve conter no mínimo 4 caracteres.</p>
+                    <p ng-show="profile_form.oldpassword.$dirty && profile_form.oldpassword.$error.maxlength && !profile_form.oldpassword.$focused" class="help-block">O campo Senha atual deve conter no máximo 8 caracteres.</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-3 control-label">Senha nova:</label>
+                <div class="col-md-8" ng-class="{ 'has-error' :
+                 (profile_form.password.$touched && profile_form.password.$error.required && !profile_form.password.$focused)
+                 ||
+                 (profile_form.password.$dirty && profile_form.password.$error.minlength && !profile_form.password.$focused)
+                 ||
+                 (profile_form.password.$dirty && profile_form.password.$error.maxlength && !profile_form.password.$focused) }">
+                    <input class="form-control" ng-model="user.Password" name="password" type="password" value="" ng-minlength="4" ng-maxlength="8" required ng-focus>
+                    <p ng-show="profile_form.password.$touched && profile_form.password.$error.required && !profile_form.password.$focused" class="help-block">O campo Senha nova é obrigatório.</p>
+                    <p ng-show="profile_form.password.$dirty && profile_form.password.$error.minlength && !profile_form.password.$focused" class="help-block">O campo Senha nova deve conter no mínimo 4 caracteres.</p>
+                    <p ng-show="profile_form.password.$dirty && profile_form.password.$error.maxlength && !profile_form.password.$focused" class="help-block">O campo Senha nova deve conter no máximo 8 caracteres.</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-3 control-label">Confirmar senha:</label>
+                <div class="col-md-8" ng-class="{ 'has-error' :
+                 (profile_form.confirm.$touched && profile_form.confirm.$error.required && !profile_form.confirm.$focused)
+                 ||
+                 (profile_form.confirm.$dirty && profile_form.confirm.$error.minlength && !profile_form.confirm.$focused)
+                 ||
+                 (profile_form.confirm.$dirty && profile_form.confirm.$error.maxlength && !profile_form.confirm.$focused)
+                 ||
+                 (profile_form.confirm.$dirty && profile_form.confirm.$error.unique && !profile_form.confirm.$focused) }">
+                    <input class="form-control" name="confirm" ng-model="user.Confirm" type="password" value="" password-match="user.Password" ng-minlength="4" ng-maxlength="8" required ng-focus>
+                    <p ng-show="profile_form.confirm.$touched && profile_form.confirm.$error.required && !profile_form.confirm.$focused" class="help-block">O campo Confirmação da senha é obrigatório.</p>
+                    <p ng-show="profile_form.confirm.$dirty && profile_form.confirm.$error.unique && !profile_form.confirm.$focused" class="help-block">A Confirmação da senha não confere com a Senha nova informada.</p>
+                    <p ng-show="profile_form.confirm.$dirty && profile_form.confirm.$error.minlength && !profile_form.confirm.$focused" class="help-block">O campo Confirmação da senha deve conter no mínimo 4 caracteres.</p>
+                    <p ng-show="profile_form.confirm.$dirty && profile_form.confirm.$error.maxlength && !profile_form.confirm.$focused" class="help-block">O campo Confirmação da senha deve conter no máximo 8 caracteres.</p>
+
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-3 control-label"></label>
+                <div class="col-md-8">
+                    <input type="submit" class="btn btn-primary btn-block" value="Salvar">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Apponto.API", "Apponto.API\Apponto.API.csproj", "{19D7F61A-19E6-451C-B8FE-452DCAAE592F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Apponto.Web", "Apponto.Web\Apponto.Web.csproj", "{BB20B40F-3981-44E7-930F-C5A1A85FBCE7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Apponto.Database", "Apponto.Database\Apponto.Database.csproj", "{0319FD96-D9F3-4A28-9933-B71EFD1D3838}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Apponto.Service", "Apponto.Service\Apponto.Service.csproj", "{17FE2090-D85A-4AFF-917A-2C8EDBE31FA2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Apponto.Model", "Apponto.Model\Apponto.Model.csproj", "{D0B5B22A-F12B-4704-BDD4-BBDD66553FC1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{1D466723-9D2D-4EF9-A366-10879F1A445A}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{19D7F61A-19E6-451C-B8FE-452DCAAE592F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19D7F61A-19E6-451C-B8FE-452DCAAE592F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19D7F61A-19E6-451C-B8FE-452DCAAE592F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19D7F61A-19E6-451C-B8FE-452DCAAE592F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB20B40F-3981-44E7-930F-C5A1A85FBCE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB20B40F-3981-44E7-930F-C5A1A85FBCE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB20B40F-3981-44E7-930F-C5A1A85FBCE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB20B40F-3981-44E7-930F-C5A1A85FBCE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0319FD96-D9F3-4A28-9933-B71EFD1D3838}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0319FD96-D9F3-4A28-9933-B71EFD1D3838}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0319FD96-D9F3-4A28-9933-B71EFD1D3838}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0319FD96-D9F3-4A28-9933-B71EFD1D3838}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17FE2090-D85A-4AFF-917A-2C8EDBE31FA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17FE2090-D85A-4AFF-917A-2C8EDBE31FA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17FE2090-D85A-4AFF-917A-2C8EDBE31FA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17FE2090-D85A-4AFF-917A-2C8EDBE31FA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0B5B22A-F12B-4704-BDD4-BBDD66553FC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0B5B22A-F12B-4704-BDD4-BBDD66553FC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0B5B22A-F12B-4704-BDD4-BBDD66553FC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0B5B22A-F12B-4704-BDD4-BBDD66553FC1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

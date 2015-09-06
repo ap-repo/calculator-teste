@@ -1,0 +1,10 @@
+C:\Desenvolvimento\Junior\Faculdade\Apponto\Apponto\Apponto.Database\bin\Release\Apponto.Database.dll.config
+C:\Desenvolvimento\Junior\Faculdade\Apponto\Apponto\Apponto.Database\bin\Release\Apponto.Database.dll
+C:\Desenvolvimento\Junior\Faculdade\Apponto\Apponto\Apponto.Database\bin\Release\Apponto.Database.pdb
+C:\Desenvolvimento\Junior\Faculdade\Apponto\Apponto\Apponto.Database\bin\Release\EntityFramework.dll
+C:\Desenvolvimento\Junior\Faculdade\Apponto\Apponto\Apponto.Database\bin\Release\EntityFramework.SqlServer.dll
+C:\Desenvolvimento\Junior\Faculdade\Apponto\Apponto\Apponto.Database\bin\Release\EntityFramework.xml
+C:\Desenvolvimento\Junior\Faculdade\Apponto\Apponto\Apponto.Database\bin\Release\EntityFramework.SqlServer.xml
+C:\Desenvolvimento\Junior\Faculdade\Apponto\Apponto\Apponto.Database\obj\Release\Apponto.Database.csprojResolveAssemblyReference.cache
+C:\Desenvolvimento\Junior\Faculdade\Apponto\Apponto\Apponto.Database\obj\Release\Apponto.Database.dll
+C:\Desenvolvimento\Junior\Faculdade\Apponto\Apponto\Apponto.Database\obj\Release\Apponto.Database.pdb

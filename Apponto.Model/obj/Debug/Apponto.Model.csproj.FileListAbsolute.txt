@@ -1,0 +1,5 @@
+C:\Desenvolvimento\Junior\Faculdade\Apponto\Apponto\Apponto.Model\bin\Debug\Apponto.Model.dll
+C:\Desenvolvimento\Junior\Faculdade\Apponto\Apponto\Apponto.Model\bin\Debug\Apponto.Model.pdb
+C:\Desenvolvimento\Junior\Faculdade\Apponto\Apponto\Apponto.Model\obj\Debug\Apponto.Model.dll
+C:\Desenvolvimento\Junior\Faculdade\Apponto\Apponto\Apponto.Model\obj\Debug\Apponto.Model.pdb
+C:\Desenvolvimento\Junior\Faculdade\Apponto\Apponto\Apponto.Model\obj\Debug\Apponto.Model.csprojResolveAssemblyReference.cache
