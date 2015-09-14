@@ -2,6 +2,8 @@
 using Apponto.Model;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
+using System.Data.Entity.Core.Objects;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,7 +22,9 @@ namespace Apponto.Service
                 {
                     register.IdLastRegister = lastRegister.Id;
                 }
-                
+
+                register.Gmt = register.User.Gmt;
+
                 tb_register tbRegister = ToDbModel(register);
                 appontoContext.tb_register.Add(tbRegister);
                 appontoContext.SaveChanges();
@@ -31,6 +35,14 @@ namespace Apponto.Service
             }
         }
 
+        /// <summary>
+        /// Busca registros de ponto de uma determinado período e usuário
+        /// </summary>
+        /// <param name="startDate">Data em formato GMT</param>
+        /// <param name="endDate">Data em formato GMT</param>
+        /// <param name="userId">Id do usuário</param>
+        /// <param name="desc">Verdadeiro para ordernar decrescente e Falso para ordernar crescente</param>
+        /// <returns></returns>
         public List<RegisterModel> LoadBetween(DateTime startDate, DateTime endDate, int userId, bool desc) {
             using (var appontoContext = new AppontoContext())
             {
@@ -38,9 +50,16 @@ namespace Apponto.Service
             }
         }
 
+        /// <summary>
+        /// Busca os registros de ponto de um dia atual para um determinado usuário
+        /// </summary>
+        /// <param name="date">Data em formato UTC</param>
+        /// <param name="userId">Id do usuário</param>
+        /// <param name="desc">Verdadeiro para ordernar decrescente e Falso para ordernar crescente</param>
+        /// <returns></returns>
         public List<RegisterModel> LoadCurrentDay(DateTime date, int userId,  bool desc)
         {
-            var dateFilter = DateTime.Parse(date.ToShortDateString());
+            var dateFilter = DateTime.Parse(date.AddHours(-3).ToShortDateString());
 
             return Load(dateFilter, dateFilter.AddDays(1), userId, desc);
         }
@@ -52,7 +71,7 @@ namespace Apponto.Service
                 List<tb_register> tbRegisterList;
                 List<RegisterModel> ret = new List<RegisterModel>();
                 tbRegisterList = appontoContext.tb_register.Where(x => x.tb_user.id_user == userId
-                                                                 && x.dt_register >= startDate && x.dt_register < endDate).OrderBy(x => x.dt_register).ToList();
+                                                                 && DbFunctions.AddHours(x.dt_register, x.vl_gmt) >= startDate && DbFunctions.AddHours(x.dt_register, x.vl_gmt) < endDate).OrderBy(x => x.dt_register).ToList();
                 if(desc)
                     tbRegisterList = tbRegisterList.OrderByDescending(x => x.dt_register).ToList();
 
@@ -73,6 +92,7 @@ namespace Apponto.Service
             tbRegister.vl_latitude = register.Latitude;
             tbRegister.vl_longitude = register.Longitude;
             tbRegister.ds_host = register.Rede;
+            tbRegister.vl_gmt = register.Gmt;
 
             if(register.User.Configuration.ConfigurationLimitation.LimitationType != null)
                 tbRegister.tb_limitation_type_id_limitation_type = register.User.Configuration.ConfigurationLimitation.LimitationType.Id;
@@ -95,7 +115,7 @@ namespace Apponto.Service
                 register.IdLastRegister = (int)tbRegister.id_last_register;
             if (tbRegister.dt_register != null)
             {
-                register.Date = (DateTime)tbRegister.dt_register;
+                register.Date = (DateTime)tbRegister.dt_register.Value.AddHours(Double.Parse(tbRegister.vl_gmt.ToString()));
             }
             
             if (tbRegister.vl_latitude != null)
@@ -106,7 +126,10 @@ namespace Apponto.Service
 
             if(tbRegister.tb_action != null)
                 register.Action = new ActionModel() { Id = tbRegister.tb_action.id_action, Name = tbRegister.tb_action.ds_action };
-            
+
+            if (tbRegister.vl_gmt != null)
+                register.Gmt = (int)tbRegister.vl_gmt;
+
             return register;
         }
     }

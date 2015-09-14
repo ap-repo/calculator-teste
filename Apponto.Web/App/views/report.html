@@ -51,17 +51,40 @@
         <tr>
             <th>Dia</th>
             <th>Registros</th>
+            <th>Trabalhado</th>
         </tr>
     </thead>
     <tbody>
         <tr ng-repeat="record in records">
             <td class="col-md-2">{{record.Key}}</td>
-            <td class="col-md-10">
+            <td class="col-md-8">
                 <div class="col-md-3" style="display: inline;" ng-repeat="register in record.List">
                         <span class="label" ng-class="{ 'label-success': register.Action.Id == 1 || register.Action.Id == 3, 'label-warning': register.Action.Id == 2, 'label-danger' : register.Action.Id == 4 }">{{register.Action.Name.substring(0,1)}}</span>
                         <span>{{  register.DateFormatedHourMinute }}</span>
                 </div>
             </td>
+            <td class="col-md-2">{{record.Worked}}</td>
         </tr>
     </tbody>
 </table>
+
+<nav class="navbar-form navbar-fixed-bottom">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Dias</th>
+                <th></th>
+                <th>Total trabalhado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="col-md-2">{{records.length}} dias</td>
+                <td class="col-md-8">
+                    
+                </td>
+                <td class="col-md-2">{{totalWorked}}</td>
+            </tr>
+        </tbody>
+    </table>
+</nav>

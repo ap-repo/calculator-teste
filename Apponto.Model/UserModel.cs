@@ -19,6 +19,7 @@ namespace Apponto.Model
         public int Identification { get; set; }
         public string Password { get; set; }
         public string OldPassword { get; set; }
+        public int Gmt { get; set; }
         //Deprecated
         public string Photo { get; set; }
 

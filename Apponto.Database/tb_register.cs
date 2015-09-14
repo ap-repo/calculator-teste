@@ -28,6 +28,8 @@ namespace Apponto.Database
         [StringLength(100)]
         public string ds_host { get; set; }
 
+        public int? vl_gmt { get; set; }
+
         public virtual tb_action tb_action { get; set; }
 
         public virtual tb_limitation_type tb_limitation_type { get; set; }

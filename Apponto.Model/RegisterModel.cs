@@ -18,11 +18,13 @@ namespace Apponto.Model
         public double Longitude { get; set; }
         public string Rede { get; set; }
 
+        public int Gmt { get; set; }
+
         public double DateMilliseconds
         {
             get
             {
-                return Date.Subtract(new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc)).TotalMilliseconds;
+                return Date.Subtract(new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc).AddHours(Double.Parse(Gmt.ToString()))).TotalMilliseconds;
             }
         }
 
@@ -30,7 +32,15 @@ namespace Apponto.Model
         {
             get
             {
-                return DateTime.UtcNow.Subtract(Date).Hours;
+                return DateTime.UtcNow.AddHours(Double.Parse(Gmt.ToString())).Subtract(Date).Hours;
+            }
+        }
+
+        public double MinuteAgo
+        {
+            get
+            {
+                return DateTime.UtcNow.AddHours(Double.Parse(Gmt.ToString())).Subtract(Date).Minutes;
             }
         }
     }

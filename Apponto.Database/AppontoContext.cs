@@ -144,6 +144,10 @@ namespace Apponto.Database
                 .IsUnicode(false);
 
             modelBuilder.Entity<tb_user>()
+                .Property(e => e.ds_photo)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<tb_user>()
                 .HasMany(e => e.tb_register)
                 .WithRequired(e => e.tb_user)
                 .HasForeignKey(e => e.tb_user_id_user)

@@ -75,12 +75,19 @@
             method: 'GET'
         }).success(function (data) {
             $scope.records = [];
+            $scope.totalWorked = 0;
 
             $.each(data, function (i, day) {
                 $.each(day.List, function (i, register) {
-                    register.DateFormatedHourMinute = moment(register.DateMilliseconds).format('HH:mm');
+                    register.DateFormatedHourMinute = moment(register.DateMilliseconds).format('HH:mm:ss');
                 });
+
+                $scope.totalWorked += day.Worked;
+
+                day.Worked = moment.utc(day.Worked).format('HH:mm:ss');
             });
+
+            $scope.totalWorked = moment.utc($scope.totalWorked).format('HH:mm:ss');
 
             $scope.records = data;
         });

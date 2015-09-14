@@ -215,6 +215,9 @@ namespace Apponto.Service
             user.Name = tbUser.ds_name;
             user.LastName = tbUser.ds_lastname;
 
+            if(tbUser.vl_gmt != null)
+                user.Gmt = (int)tbUser.vl_gmt;
+
             if (tbUser.tb_company != null)
                 user.Company = new CompanyService().ToModel(tbUser.tb_company);
 
