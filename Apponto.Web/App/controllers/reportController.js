@@ -90,8 +90,6 @@
            var x = moment.duration($scope.totalWorked, "milliseconds")
             $scope.totalWorked = Math.floor(x.asHours()) + moment.utc(x.asMilliseconds()).format(":mm:ss")
 
-            //$scope.totalWorked = moment.utc($scope.totalWorked).format('HH:mm:ss');
-
             $scope.records = data;
         });
     }

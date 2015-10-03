@@ -59,8 +59,11 @@
             <td class="col-md-2">{{record.Key}}</td>
             <td class="col-md-8">
                 <div class="col-md-3" style="display: inline;" ng-repeat="register in record.List">
-                        <span class="label" ng-class="{ 'label-success': register.Action.Id == 1 || register.Action.Id == 3, 'label-warning': register.Action.Id == 2, 'label-danger' : register.Action.Id == 4 }">{{register.Action.Name.substring(0,1)}}</span>
-                        <span>{{  register.DateFormatedHourMinute }}</span>
+                    <span class="label"
+                          ng-class="{ 'label-success': register.Action.Id == 1 || register.Action.Id == 3, 'label-warning': register.Action.Id == 2, 'label-danger' : register.Action.Id == 4 }"
+                          tooltip-placement="bottom"
+                          tooltip="{ 'Entrada': register.Action.Id == 1, 'Volta da pausa': register.Action.Id == 3, 'Pausa': register.Action.Id == 2, 'Saída' : register.Action.Id == 4 }">{{register.Action.Name.substring(0,1)}}</span>
+                    <span>{{  register.DateFormatedHourMinute }}</span>
                 </div>
             </td>
             <td class="col-md-2">{{record.Worked}}</td>
@@ -80,9 +83,7 @@
         <tbody>
             <tr>
                 <td class="col-md-2">{{records.length}} dias</td>
-                <td class="col-md-8">
-                    
-                </td>
+                <td class="col-md-8"></td>
                 <td class="col-md-2">{{totalWorked}}</td>
             </tr>
         </tbody>
