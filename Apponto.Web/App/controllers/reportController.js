@@ -1,4 +1,4 @@
-﻿appontoWeb.controller('ReportController', function ($scope, $state, $http, $stateParams, UserService, SystemService) {
+﻿appontoWeb.controller('ReportController', function ($scope, $state, $http, $stateParams, $timeout, UserService, SystemService) {
     var userId = $stateParams.userId;
 
     $scope.today = function () {
@@ -68,6 +68,22 @@
         return '';
     };
 
+    $scope.showDetails = function (day) {
+        if (day.opened)
+            day.opened = false;
+        else
+            day.opened = true;
+
+        $.each($scope.records, function (i, day) {
+            if(day.opened = false)
+                day.isReady = false;
+        });
+
+        $timeout(function () {
+            day.isReady = true;
+        }, 1000);
+    }
+
     $scope.getReport = function () {
         var userSearch = (userId !== undefined) ? userId : UserService.getUser().Id;
         $http({
@@ -80,14 +96,34 @@
             $.each(data, function (i, day) {
                 $.each(day.List, function (i, register) {
                     register.DateFormatedHourMinute = moment(register.DateMilliseconds).format('HH:mm:ss');
+
+                    register.isReady = false;
+                    register.opened = false;
+
+                    register.map = {
+                        center: {
+                            latitude: register.Latitude,
+                            longitude: register.Longitude
+                        },
+                        zoom: 17,
+                        options: { draggable: false },
+                        control: {}
+                    }
+
+                    register.marker = {
+                        id: 0,
+                        coords: angular.copy(register.map.center),
+                        options: { draggable: false }
+                    }
                 });
 
                 $scope.totalWorked += day.Worked;
 
+                day.WorkedMilliseconds = day.Worked;
                 day.Worked = moment.utc(day.Worked).format('HH:mm:ss');
             });
 
-           var x = moment.duration($scope.totalWorked, "milliseconds")
+            var x = moment.duration($scope.totalWorked, "milliseconds")
             $scope.totalWorked = Math.floor(x.asHours()) + moment.utc(x.asMilliseconds()).format(":mm:ss")
 
             $scope.records = data;

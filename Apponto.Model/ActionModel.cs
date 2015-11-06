@@ -14,9 +14,9 @@ namespace Apponto.Model
 
     public enum ActionEnum
     {
-        Inicio = 1,
-        Pause = 2,
-        VoltaPausa = 3,
-        Saida = 4
+        Start = 1,
+        Break = 2,
+        BreakBack = 3,
+        End = 4
     }
 }

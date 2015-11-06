@@ -30,6 +30,8 @@ namespace Apponto.Database
 
         public int? vl_gmt { get; set; }
 
+        public int? id_limitation_type { get; set; }
+
         public virtual tb_action tb_action { get; set; }
 
         public virtual tb_limitation_type tb_limitation_type { get; set; }

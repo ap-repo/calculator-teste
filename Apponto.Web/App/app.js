@@ -288,8 +288,8 @@ appontoWeb.config(function (uiGmapGoogleMapApiProvider) {
 })
 
 appontoWeb.controller('BaseController', function ($scope, $state, $location, UserService) {
-    //de acordo com perfil, montar o menu
 
+    //de acordo com perfil, montar o menu
     $scope.baseMenuList = [
         { Name: 'Principal', Route: 'principal', Order: 1, Active: true, Icon: 'fa fa-home' },
         { Name: 'Minha Localização', Route: 'location', Order: 2, Active: false, Icon: 'fa fa-map-marker' },

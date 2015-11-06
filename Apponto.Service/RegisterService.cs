@@ -91,11 +91,14 @@ namespace Apponto.Service
             tbRegister.dt_register = register.Date;
             tbRegister.vl_latitude = register.Latitude;
             tbRegister.vl_longitude = register.Longitude;
-            tbRegister.ds_host = register.Rede;
+            tbRegister.ds_host = register.Host;
             tbRegister.vl_gmt = register.Gmt;
 
-            if(register.User.Configuration.ConfigurationLimitation.LimitationType != null)
+            if (register.User.Configuration.ConfigurationLimitation.LimitationType != null)
+            {
                 tbRegister.tb_limitation_type_id_limitation_type = register.User.Configuration.ConfigurationLimitation.LimitationType.Id;
+                tbRegister.id_limitation_type = register.User.Configuration.ConfigurationLimitation.LimitationType.Id;
+            }
 
             if (register.Action != null)
                 tbRegister.tb_action_id_action = register.Action.Id;
@@ -122,7 +125,10 @@ namespace Apponto.Service
                 register.Latitude = (double)tbRegister.vl_latitude;
             if (tbRegister.vl_longitude != null)
                 register.Longitude = (double)tbRegister.vl_longitude;
-            register.Rede = tbRegister.ds_host;
+            register.Host = tbRegister.ds_host;
+
+            if (tbRegister.id_limitation_type != null)
+                register.IdLimitationType = (int)tbRegister.id_limitation_type;
 
             if(tbRegister.tb_action != null)
                 register.Action = new ActionModel() { Id = tbRegister.tb_action.id_action, Name = tbRegister.tb_action.ds_action };

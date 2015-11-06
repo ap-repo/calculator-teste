@@ -37,12 +37,12 @@ namespace Apponto.Database
 
         public int? id_user_superior { get; set; }
 
-        [StringLength(100)]
-        public string ds_photo { get; set; }
-
         public int? tb_company_id_company { get; set; }
 
         public int? vl_gmt { get; set; }
+
+        [StringLength(100)]
+        public string ds_photo { get; set; }
 
         public virtual tb_company tb_company { get; set; }
 

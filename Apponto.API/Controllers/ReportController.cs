@@ -38,13 +38,13 @@ namespace Apponto.API.Controllers
             double total = 0;
             for (int i = 0; i < ret.Count - 1; i++)
             {
-                if (ret[i].Action.Id == (int)ActionEnum.Inicio)
+                if (ret[i].Action.Id == (int)ActionEnum.Start)
                 {
-                    if (ret[i + 1].Action.Id == (int)ActionEnum.Pause)
+                    if (ret[i + 1].Action.Id == (int)ActionEnum.Break)
                     {
                         total += ret[i + 1].Date.Subtract(ret[i].Date).TotalMilliseconds;
                     }
-                    else if (ret[i + 1].Action.Id == (int)ActionEnum.Saida)
+                    else if (ret[i + 1].Action.Id == (int)ActionEnum.End)
                     {
                         total += ret[i + 1].Date.Subtract(ret[i].Date).TotalMilliseconds;
                         break;
@@ -54,13 +54,13 @@ namespace Apponto.API.Controllers
                         //TODO: substrair pelo horário atual
                     }
                 }
-                else if (ret[i].Action.Id == (int)ActionEnum.VoltaPausa)
+                else if (ret[i].Action.Id == (int)ActionEnum.BreakBack)
                 {
-                    if (ret[i + 1].Action.Id == (int)ActionEnum.Pause)
+                    if (ret[i + 1].Action.Id == (int)ActionEnum.Break)
                     {
                         total += ret[i + 1].Date.Subtract(ret[i].Date).TotalMilliseconds;
                     }
-                    else if (ret[i + 1].Action.Id == (int)ActionEnum.Saida)
+                    else if (ret[i + 1].Action.Id == (int)ActionEnum.End)
                     {
                         total += ret[i + 1].Date.Subtract(ret[i].Date).TotalMilliseconds;
                         break;

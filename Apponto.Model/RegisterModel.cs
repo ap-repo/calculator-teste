@@ -16,7 +16,8 @@ namespace Apponto.Model
 
         public double Latitude { get; set; }
         public double Longitude { get; set; }
-        public string Rede { get; set; }
+        public string Host { get; set; }
+        public int IdLimitationType { get; set; }
 
         public int Gmt { get; set; }
 

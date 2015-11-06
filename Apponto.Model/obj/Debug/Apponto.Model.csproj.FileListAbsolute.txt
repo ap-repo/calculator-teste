@@ -8,3 +8,8 @@ C:\Windows\bkp\Documents\GitHub\calculator-teste\calculator-teste\Apponto.Model\
 C:\Windows\bkp\Documents\GitHub\calculator-teste\calculator-teste\Apponto.Model\obj\Debug\Apponto.Model.csprojResolveAssemblyReference.cache
 C:\Windows\bkp\Documents\GitHub\calculator-teste\calculator-teste\Apponto.Model\obj\Debug\Apponto.Model.dll
 C:\Windows\bkp\Documents\GitHub\calculator-teste\calculator-teste\Apponto.Model\obj\Debug\Apponto.Model.pdb
+C:\Windows\bkp\Documents\GitHub\calculator-teste\Apponto.Model\bin\Debug\Apponto.Model.dll
+C:\Windows\bkp\Documents\GitHub\calculator-teste\Apponto.Model\bin\Debug\Apponto.Model.pdb
+C:\Windows\bkp\Documents\GitHub\calculator-teste\Apponto.Model\obj\Debug\Apponto.Model.csprojResolveAssemblyReference.cache
+C:\Windows\bkp\Documents\GitHub\calculator-teste\Apponto.Model\obj\Debug\Apponto.Model.dll
+C:\Windows\bkp\Documents\GitHub\calculator-teste\Apponto.Model\obj\Debug\Apponto.Model.pdb
