@@ -10,262 +10,262 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   </PropertyGroup>
   <ItemGroup>
     <File Include="App/app.js">
-      <publishTime>08/05/2015 20:55:07</publishTime>
+      <publishTime>10/29/2015 03:18:13</publishTime>
     </File>
     <File Include="App/controllers/configurationController.js">
-      <publishTime>07/10/2015 00:06:19</publishTime>
+      <publishTime>10/02/2015 22:45:10</publishTime>
     </File>
     <File Include="App/controllers/configurationEmployeeController.js">
-      <publishTime>07/12/2015 20:25:03</publishTime>
+      <publishTime>10/02/2015 22:45:10</publishTime>
     </File>
     <File Include="App/controllers/configurationPermissionController.js">
-      <publishTime>05/23/2015 18:09:04</publishTime>
+      <publishTime>10/02/2015 22:45:10</publishTime>
     </File>
     <File Include="App/controllers/configurationProfileController.js">
-      <publishTime>07/19/2015 19:13:18</publishTime>
+      <publishTime>10/29/2015 03:18:34</publishTime>
     </File>
     <File Include="App/controllers/employeeController.js">
       <publishTime>06/07/2015 18:37:38</publishTime>
     </File>
     <File Include="App/controllers/locationController.js">
-      <publishTime>07/12/2015 02:03:16</publishTime>
+      <publishTime>10/02/2015 22:45:10</publishTime>
     </File>
     <File Include="App/controllers/loginController.js">
-      <publishTime>07/09/2015 14:21:48</publishTime>
+      <publishTime>10/02/2015 22:45:10</publishTime>
     </File>
     <File Include="App/controllers/logoutController.js">
-      <publishTime>06/04/2015 04:23:27</publishTime>
+      <publishTime>10/02/2015 22:45:10</publishTime>
     </File>
     <File Include="App/controllers/registerController.js">
-      <publishTime>07/18/2015 00:25:39</publishTime>
+      <publishTime>10/02/2015 22:45:10</publishTime>
     </File>
     <File Include="App/controllers/reportController.js">
-      <publishTime>08/05/2015 21:09:45</publishTime>
+      <publishTime>11/06/2015 14:44:26</publishTime>
     </File>
     <File Include="App/controllers/signInController.js">
-      <publishTime>07/12/2015 19:44:25</publishTime>
+      <publishTime>10/02/2015 22:45:10</publishTime>
     </File>
     <File Include="App/controllers/signUpController.js">
-      <publishTime>07/12/2015 14:23:05</publishTime>
+      <publishTime>10/02/2015 22:45:10</publishTime>
     </File>
     <File Include="App/controllers/userAccessLevelController.js">
-      <publishTime>07/12/2015 01:28:39</publishTime>
+      <publishTime>10/02/2015 22:45:10</publishTime>
     </File>
     <File Include="App/controllers/userController.js">
-      <publishTime>07/10/2015 00:05:12</publishTime>
+      <publishTime>10/02/2015 22:45:10</publishTime>
     </File>
     <File Include="App/controllers/userRestrictionController.js">
-      <publishTime>07/12/2015 20:05:47</publishTime>
+      <publishTime>10/02/2015 22:45:10</publishTime>
     </File>
     <File Include="App/files/default.png">
-      <publishTime>06/06/2015 21:41:31</publishTime>
+      <publishTime>10/02/2015 22:45:10</publishTime>
     </File>
     <File Include="App/files/profile1.png">
-      <publishTime>06/07/2015 14:51:00</publishTime>
+      <publishTime>10/02/2015 22:45:10</publishTime>
     </File>
     <File Include="App/Index.html">
-      <publishTime>07/22/2015 23:14:41</publishTime>
+      <publishTime>10/29/2015 03:18:19</publishTime>
     </File>
     <File Include="App/references/fonts/fontawesome-webfont.eot">
-      <publishTime>04/17/2015 20:56:24</publishTime>
+      <publishTime>10/02/2015 22:45:10</publishTime>
     </File>
     <File Include="App/references/fonts/fontawesome-webfont.svg">
-      <publishTime>04/17/2015 20:56:24</publishTime>
+      <publishTime>10/02/2015 22:45:10</publishTime>
     </File>
     <File Include="App/references/fonts/fontawesome-webfont.ttf">
-      <publishTime>04/17/2015 20:56:24</publishTime>
+      <publishTime>10/02/2015 22:45:10</publishTime>
     </File>
     <File Include="App/references/fonts/fontawesome-webfont.woff">
-      <publishTime>04/17/2015 20:56:24</publishTime>
+      <publishTime>10/02/2015 22:45:10</publishTime>
     </File>
     <File Include="App/references/fonts/fontawesome-webfont.woff2">
-      <publishTime>04/17/2015 20:56:24</publishTime>
+      <publishTime>10/02/2015 22:45:10</publishTime>
     </File>
     <File Include="App/references/fonts/FontAwesome.otf">
-      <publishTime>04/17/2015 20:56:24</publishTime>
+      <publishTime>10/02/2015 22:45:10</publishTime>
     </File>
     <File Include="App/references/javascripts/angular-animate.js">
-      <publishTime>06/04/2015 02:11:52</publishTime>
+      <publishTime>10/02/2015 22:45:10</publishTime>
     </File>
     <File Include="App/references/javascripts/angular-cookies.min.js">
-      <publishTime>06/04/2015 02:55:12</publishTime>
+      <publishTime>10/02/2015 22:45:10</publishTime>
     </File>
     <File Include="App/references/javascripts/angular-google-maps.min.js">
-      <publishTime>06/06/2015 03:53:49</publishTime>
+      <publishTime>10/02/2015 22:45:10</publishTime>
     </File>
     <File Include="App/references/javascripts/angular-loading-spinner.js">
-      <publishTime>05/29/2015 20:50:28</publishTime>
+      <publishTime>10/02/2015 22:45:10</publishTime>
     </File>
     <File Include="App/references/javascripts/angular-resource.js">
-      <publishTime>05/22/2015 18:55:43</publishTime>
+      <publishTime>10/02/2015 22:45:10</publishTime>
     </File>
     <File Include="App/references/javascripts/angular-route.js">
       <publishTime>05/22/2015 18:55:43</publishTime>
     </File>
     <File Include="App/references/javascripts/angular-touch.min.js">
-      <publishTime>06/05/2015 13:57:23</publishTime>
+      <publishTime>10/02/2015 22:45:10</publishTime>
     </File>
     <File Include="App/references/javascripts/angular-ui-router.js">
-      <publishTime>05/23/2015 17:37:54</publishTime>
+      <publishTime>10/02/2015 22:45:10</publishTime>
     </File>
     <File Include="App/references/javascripts/angular-ui-router.min.js">
-      <publishTime>05/23/2015 17:38:04</publishTime>
+      <publishTime>10/02/2015 22:45:10</publishTime>
     </File>
     <File Include="App/references/javascripts/angular.js">
-      <publishTime>05/22/2015 18:55:44</publishTime>
+      <publishTime>10/02/2015 22:45:10</publishTime>
     </File>
     <File Include="App/references/javascripts/bootstrap.min.js">
-      <publishTime>05/22/2015 18:55:44</publishTime>
+      <publishTime>10/02/2015 22:45:10</publishTime>
     </File>
     <File Include="App/references/javascripts/checklist-model.js">
-      <publishTime>07/10/2015 14:42:10</publishTime>
+      <publishTime>10/02/2015 22:45:10</publishTime>
     </File>
     <File Include="App/references/javascripts/jquery-2.1.3.min.js">
-      <publishTime>05/22/2015 18:55:44</publishTime>
+      <publishTime>10/02/2015 22:45:10</publishTime>
     </File>
     <File Include="App/references/javascripts/jquery.storageapi.js">
-      <publishTime>05/08/2015 17:16:02</publishTime>
+      <publishTime>10/02/2015 22:45:10</publishTime>
     </File>
     <File Include="App/references/javascripts/loading-bar.js">
-      <publishTime>05/26/2015 21:00:20</publishTime>
+      <publishTime>10/02/2015 22:45:10</publishTime>
     </File>
     <File Include="App/references/javascripts/lodash.min.js">
-      <publishTime>06/06/2015 03:54:52</publishTime>
+      <publishTime>10/02/2015 22:45:10</publishTime>
     </File>
     <File Include="App/references/javascripts/moment.js">
-      <publishTime>06/20/2015 00:53:19</publishTime>
+      <publishTime>10/02/2015 22:45:10</publishTime>
     </File>
     <File Include="App/references/javascripts/toaster.js">
-      <publishTime>07/11/2015 19:59:12</publishTime>
+      <publishTime>10/02/2015 22:45:10</publishTime>
     </File>
     <File Include="App/references/javascripts/ui-bootstrap-tpls-0.13.0.min.js">
-      <publishTime>05/30/2015 17:50:51</publishTime>
+      <publishTime>10/02/2015 22:45:10</publishTime>
     </File>
     <File Include="App/references/stylesheets/animations/ng-view-animation.css">
-      <publishTime>06/04/2015 02:40:43</publishTime>
+      <publishTime>10/02/2015 22:45:10</publishTime>
     </File>
     <File Include="App/references/stylesheets/apponto.css">
-      <publishTime>06/07/2015 15:47:48</publishTime>
+      <publishTime>10/02/2015 22:45:10</publishTime>
     </File>
     <File Include="App/references/stylesheets/bootstrap-theme.css">
-      <publishTime>05/22/2015 18:55:45</publishTime>
+      <publishTime>10/02/2015 22:45:10</publishTime>
     </File>
     <File Include="App/references/stylesheets/bootstrap.min.css">
-      <publishTime>07/17/2015 23:44:50</publishTime>
+      <publishTime>10/02/2015 22:45:10</publishTime>
     </File>
     <File Include="App/references/stylesheets/font-awesome.min.css">
-      <publishTime>04/17/2015 20:56:24</publishTime>
+      <publishTime>10/02/2015 22:45:10</publishTime>
     </File>
     <File Include="App/references/stylesheets/jquery.mobile-1.4.5.min.css">
-      <publishTime>10/31/2014 14:33:46</publishTime>
+      <publishTime>10/02/2015 22:45:10</publishTime>
     </File>
     <File Include="App/references/stylesheets/loading-bar.css">
-      <publishTime>05/26/2015 21:00:20</publishTime>
+      <publishTime>10/02/2015 23:22:01</publishTime>
     </File>
     <File Include="App/references/stylesheets/toaster.css">
-      <publishTime>07/11/2015 19:59:02</publishTime>
+      <publishTime>10/02/2015 22:45:10</publishTime>
     </File>
     <File Include="App/views/configuration.html">
-      <publishTime>05/29/2015 03:28:00</publishTime>
+      <publishTime>10/02/2015 22:45:10</publishTime>
     </File>
     <File Include="App/views/configurationEmployee.html">
-      <publishTime>07/12/2015 13:29:49</publishTime>
+      <publishTime>11/06/2015 15:01:03</publishTime>
     </File>
     <File Include="App/views/configurationPermission.html">
-      <publishTime>05/23/2015 18:08:31</publishTime>
+      <publishTime>10/02/2015 22:45:10</publishTime>
     </File>
     <File Include="App/views/configurationProfile.html">
-      <publishTime>07/19/2015 19:10:52</publishTime>
+      <publishTime>10/02/2015 22:45:10</publishTime>
     </File>
     <File Include="App/views/employee.html">
       <publishTime>06/07/2015 17:23:25</publishTime>
     </File>
     <File Include="App/views/location.html">
-      <publishTime>06/07/2015 17:35:41</publishTime>
+      <publishTime>10/02/2015 22:45:10</publishTime>
     </File>
     <File Include="App/views/login.html">
-      <publishTime>05/23/2015 22:21:05</publishTime>
+      <publishTime>10/02/2015 22:45:10</publishTime>
     </File>
     <File Include="App/views/register.html">
-      <publishTime>07/18/2015 03:06:49</publishTime>
+      <publishTime>10/02/2015 23:10:41</publishTime>
     </File>
     <File Include="App/views/report.html">
-      <publishTime>06/20/2015 01:31:30</publishTime>
+      <publishTime>11/06/2015 15:41:46</publishTime>
     </File>
     <File Include="App/views/signIn.html">
-      <publishTime>07/18/2015 02:13:49</publishTime>
+      <publishTime>10/02/2015 22:45:10</publishTime>
     </File>
     <File Include="App/views/signUp.html">
-      <publishTime>07/19/2015 19:03:58</publishTime>
+      <publishTime>10/02/2015 22:45:10</publishTime>
     </File>
     <File Include="App/views/user.html">
-      <publishTime>07/09/2015 23:54:17</publishTime>
+      <publishTime>10/02/2015 22:45:10</publishTime>
     </File>
     <File Include="App/views/userAccessLevel.html">
-      <publishTime>07/11/2015 00:46:56</publishTime>
+      <publishTime>10/02/2015 22:45:10</publishTime>
     </File>
     <File Include="App/views/userRestriction.html">
-      <publishTime>06/07/2015 17:23:25</publishTime>
+      <publishTime>10/03/2015 09:21:25</publishTime>
     </File>
     <File Include="bin/Antlr3.Runtime.dll">
-      <publishTime>05/22/2015 18:57:01</publishTime>
+      <publishTime>10/02/2015 22:45:14</publishTime>
     </File>
     <File Include="bin/Apponto.Web.dll">
-      <publishTime>08/06/2015 09:32:30</publishTime>
+      <publishTime>11/06/2015 17:50:32</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>05/23/2015 23:52:11</publishTime>
     </File>
     <File Include="bin/Microsoft.Web.Infrastructure.dll">
-      <publishTime>05/22/2015 18:56:48</publishTime>
+      <publishTime>10/02/2015 22:45:14</publishTime>
     </File>
     <File Include="bin/Microsoft.Web.Mvc.FixedDisplayModes.dll">
-      <publishTime>05/22/2015 18:56:16</publishTime>
+      <publishTime>10/02/2015 22:45:12</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
-      <publishTime>05/28/2015 01:55:20</publishTime>
+      <publishTime>10/02/2015 22:45:14</publishTime>
     </File>
     <File Include="bin/System.Net.Http.Formatting.dll">
-      <publishTime>05/28/2015 01:55:21</publishTime>
+      <publishTime>10/02/2015 22:45:12</publishTime>
     </File>
     <File Include="bin/System.Web.Http.dll">
-      <publishTime>05/28/2015 01:55:21</publishTime>
+      <publishTime>10/02/2015 22:45:12</publishTime>
     </File>
     <File Include="bin/System.Web.Http.WebHost.dll">
-      <publishTime>05/28/2015 01:55:21</publishTime>
+      <publishTime>10/02/2015 22:45:13</publishTime>
     </File>
     <File Include="bin/System.Web.Mvc.dll">
-      <publishTime>05/22/2015 18:56:15</publishTime>
+      <publishTime>10/02/2015 22:45:12</publishTime>
     </File>
     <File Include="bin/System.Web.Optimization.dll">
-      <publishTime>05/22/2015 18:56:19</publishTime>
+      <publishTime>10/02/2015 22:45:12</publishTime>
     </File>
     <File Include="bin/System.Web.Providers.dll">
-      <publishTime>05/22/2015 18:56:17</publishTime>
+      <publishTime>10/02/2015 22:45:12</publishTime>
     </File>
     <File Include="bin/System.Web.Razor.dll">
-      <publishTime>05/22/2015 18:56:18</publishTime>
+      <publishTime>10/02/2015 22:45:12</publishTime>
     </File>
     <File Include="bin/System.Web.WebPages.Deployment.dll">
-      <publishTime>05/22/2015 18:56:30</publishTime>
+      <publishTime>10/02/2015 22:45:13</publishTime>
     </File>
     <File Include="bin/System.Web.WebPages.dll">
-      <publishTime>05/22/2015 18:56:31</publishTime>
+      <publishTime>10/02/2015 22:45:13</publishTime>
     </File>
     <File Include="bin/System.Web.WebPages.Razor.dll">
-      <publishTime>05/22/2015 18:56:31</publishTime>
+      <publishTime>10/02/2015 22:45:13</publishTime>
     </File>
     <File Include="bin/WebGrease.dll">
-      <publishTime>05/22/2015 18:57:02</publishTime>
+      <publishTime>10/02/2015 22:45:14</publishTime>
     </File>
     <File Include="Global.asax">
-      <publishTime>05/22/2015 18:55:52</publishTime>
+      <publishTime>10/02/2015 22:45:10</publishTime>
     </File>
     <File Include="packages.config">
-      <publishTime>05/29/2015 18:26:03</publishTime>
+      <publishTime>10/02/2015 22:45:11</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>06/01/2015 21:29:29</publishTime>
+      <publishTime>11/06/2015 17:50:32</publishTime>
     </File>
   </ItemGroup>
 </Project>

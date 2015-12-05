@@ -12,3 +12,17 @@ C:\Desenvolvimento\Junior\Faculdade\Apponto\Apponto\Apponto.Service\bin\Release\
 C:\Desenvolvimento\Junior\Faculdade\Apponto\Apponto\Apponto.Service\obj\Release\Apponto.Service.csprojResolveAssemblyReference.cache
 C:\Desenvolvimento\Junior\Faculdade\Apponto\Apponto\Apponto.Service\obj\Release\Apponto.Service.dll
 C:\Desenvolvimento\Junior\Faculdade\Apponto\Apponto\Apponto.Service\obj\Release\Apponto.Service.pdb
+C:\Windows\bkp\Documents\GitHub\calculator-teste\Apponto.Service\bin\Release\Apponto.Service.dll.config
+C:\Windows\bkp\Documents\GitHub\calculator-teste\Apponto.Service\bin\Release\Apponto.Service.dll
+C:\Windows\bkp\Documents\GitHub\calculator-teste\Apponto.Service\bin\Release\Apponto.Service.pdb
+C:\Windows\bkp\Documents\GitHub\calculator-teste\Apponto.Service\bin\Release\Apponto.Database.dll
+C:\Windows\bkp\Documents\GitHub\calculator-teste\Apponto.Service\bin\Release\Apponto.Model.dll
+C:\Windows\bkp\Documents\GitHub\calculator-teste\Apponto.Service\bin\Release\EntityFramework.dll
+C:\Windows\bkp\Documents\GitHub\calculator-teste\Apponto.Service\bin\Release\EntityFramework.SqlServer.dll
+C:\Windows\bkp\Documents\GitHub\calculator-teste\Apponto.Service\bin\Release\Apponto.Database.pdb
+C:\Windows\bkp\Documents\GitHub\calculator-teste\Apponto.Service\bin\Release\Apponto.Model.pdb
+C:\Windows\bkp\Documents\GitHub\calculator-teste\Apponto.Service\bin\Release\EntityFramework.xml
+C:\Windows\bkp\Documents\GitHub\calculator-teste\Apponto.Service\bin\Release\EntityFramework.SqlServer.xml
+C:\Windows\bkp\Documents\GitHub\calculator-teste\Apponto.Service\obj\Release\Apponto.Service.csprojResolveAssemblyReference.cache
+C:\Windows\bkp\Documents\GitHub\calculator-teste\Apponto.Service\obj\Release\Apponto.Service.dll
+C:\Windows\bkp\Documents\GitHub\calculator-teste\Apponto.Service\obj\Release\Apponto.Service.pdb

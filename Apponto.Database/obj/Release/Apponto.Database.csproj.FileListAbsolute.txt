@@ -8,3 +8,13 @@ C:\Desenvolvimento\Junior\Faculdade\Apponto\Apponto\Apponto.Database\bin\Release
 C:\Desenvolvimento\Junior\Faculdade\Apponto\Apponto\Apponto.Database\obj\Release\Apponto.Database.csprojResolveAssemblyReference.cache
 C:\Desenvolvimento\Junior\Faculdade\Apponto\Apponto\Apponto.Database\obj\Release\Apponto.Database.dll
 C:\Desenvolvimento\Junior\Faculdade\Apponto\Apponto\Apponto.Database\obj\Release\Apponto.Database.pdb
+C:\Windows\bkp\Documents\GitHub\calculator-teste\Apponto.Database\bin\Release\Apponto.Database.dll.config
+C:\Windows\bkp\Documents\GitHub\calculator-teste\Apponto.Database\bin\Release\Apponto.Database.dll
+C:\Windows\bkp\Documents\GitHub\calculator-teste\Apponto.Database\bin\Release\Apponto.Database.pdb
+C:\Windows\bkp\Documents\GitHub\calculator-teste\Apponto.Database\bin\Release\EntityFramework.dll
+C:\Windows\bkp\Documents\GitHub\calculator-teste\Apponto.Database\bin\Release\EntityFramework.SqlServer.dll
+C:\Windows\bkp\Documents\GitHub\calculator-teste\Apponto.Database\bin\Release\EntityFramework.xml
+C:\Windows\bkp\Documents\GitHub\calculator-teste\Apponto.Database\bin\Release\EntityFramework.SqlServer.xml
+C:\Windows\bkp\Documents\GitHub\calculator-teste\Apponto.Database\obj\Release\Apponto.Database.csprojResolveAssemblyReference.cache
+C:\Windows\bkp\Documents\GitHub\calculator-teste\Apponto.Database\obj\Release\Apponto.Database.dll
+C:\Windows\bkp\Documents\GitHub\calculator-teste\Apponto.Database\obj\Release\Apponto.Database.pdb

@@ -1,0 +1,143 @@
+﻿<div class="row">
+
+    <div class="col-md-12">
+        <div class="form-group">
+            <label class="col-lg-3 control-label">Funcionários: </label>
+            <div class="btn-group col-lg-8">
+                <ul class="list-group">
+                    <li class="list-group-item" ng-repeat="employee in employees">
+                        <input type="checkbox" checklist-model="userSelecteds" checklist-value="employee.Id"> {{employee.Name}} {{employee.LastName}} ({{employee.Email}})
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <p>De</p>
+        <p class="input-group">
+            <input type="text"
+                   class="form-control"
+                   datepicker-popup="dd-MM-yyyy"
+                   is-open="openedStartDate"
+                   ng-model="startDate"
+                   datepicker-options="dateOptions"
+                   date-disabled="disabled(date, mode)"
+                   ng-required="true"
+                   close-text="Fechar"
+                   clear-text="Limpar"
+                   current-text="Hoje" />
+            <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="open($event, 1)"><i class="fa fa-calendar"></i></button>
+            </span>
+        </p>
+    </div>
+    <div class="col-md-4">
+        <p>Até</p>
+        <p class="input-group">
+            <input type="text"
+                   class="form-control"
+                   datepicker-popup="dd-MM-yyyy"
+                   is-open="openedEndDate"
+                   ng-model="endDate"
+                   datepicker-options="dateOptions"
+                   date-disabled="disabled(date, mode)"
+                   ng-required="true"
+                   close-text="Fechar"
+                   clear-text="Limpar"
+                   current-text="Hoje" />
+            <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="open($event, 2)"><i class="fa fa-calendar"></i></button>
+            </span>
+        </p>
+    </div>
+    <div class="col-md-4">
+        <div style="visibility: hidden;" class="hidden-xs-md">
+            <p>Buscar</p>
+        </div>
+        <input type="button" class="btn btn-primary btn-block" ng-click="getReport()" value="Buscar">
+    </div>
+</div>
+
+<div ng-repeat="record in records">
+    <h3>{{record.User.Name}}</h3>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Dia</th>
+                <th>Registros</th>
+                <th>Trabalhado</th>
+                <th>Opções</th>
+            </tr>
+        </thead>
+
+        <tbody ng-repeat="result in record.Results">
+            <tr>
+                <td class="col-md-2">{{record.Key}}</td>
+                <td class="col-md-7">
+                    <div class="col-md-3" style="display: inline;" ng-repeat="register in result.List">
+                        <span class="label"
+                              ng-class="{ 'label-success': register.Action.Id == 1 || register.Action.Id == 3, 'label-warning': register.Action.Id == 2, 'label-danger' : register.Action.Id == 4 }"
+                              tooltip-placement="bottom"
+                              tooltip="{{ register.Action.Id == 1 ? 'Entrada' : register.Action.Id == 2 ? 'Pausa' : register.Action.Id == 3 ? 'Volta da pausa' : 'Saída' }}">{{register.Action.Name.substring(0,1)}}</span>
+                        <span>{{  register.DateFormatedHourMinute }}</span>
+                    </div>
+                </td>
+                <td class="col-md-2">{{record.Worked}}</td>
+                <td class="col-md-1"><a data-toggle="collapse" style="cursor:pointer;" data-target="#collapse{{record.WorkedMilliseconds}}" ng-click="showDetails(record)">Detalhes</a></td>
+            </tr>
+            <tr class="collapse" id="collapse{{record.WorkedMilliseconds}}">
+                <td colspan="4">
+                    <div class="col-sm-3" ng-repeat="register in record.List">
+                        <div>
+                            <span class="label"
+                                  ng-class="{ 'label-success': register.Action.Id == 1 || register.Action.Id == 3, 'label-warning': register.Action.Id == 2, 'label-danger' : register.Action.Id == 4 }"
+                                  tooltip-placement="bottom"
+                                  tooltip="{{ register.Action.Id == 1 ? 'Entrada' : register.Action.Id == 2 ? 'Pausa' : register.Action.Id == 3 ? 'Volta da pausa' : 'Saída' }}">{{register.Action.Name.substring(0,1)}}</span>
+                            <span>{{  register.DateFormatedHourMinute }}</span>
+                        </div>
+                        <div ng-show="register.IdLimitationType == 1" style="margin-top: 5px;">
+                            <span>Não há restrição</span>
+                        </div>
+                        <div ng-show="register.IdLimitationType == 2" style="margin-top: 5px;">
+                            <style type="text/css">
+                                .angular-google-map-container {
+                                    height: 250px;
+                                }
+                            </style>
+                            <div id="map_{{ $index }}" ng-if="record.isReady">
+                                <ui-gmap-google-map center="register.map.center" zoom="register.map.zoom" options="register.map.options">
+                                    <ui-gmap-marker coords="register.marker.coords" options="register.marker.options" idkey="register.marker.id" control="register.map.control" idkey="map_{{ $index }}">
+                                </ui-gmap-google-map>
+                            </div>
+                        </div>
+                        <div ng-show="register.IdLimitationType == 3" style="margin-top: 5px;">
+                            <span>Restrição por rede não implementada</span>
+                        </div>
+                        <hr class="visible-xs" />
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<nav class="navbar-form navbar-fixed-bottom" style="height: 70px;">
+    <table class="table table-striped" style="height: 100%">
+        <thead>
+            <tr>
+                <th>Dias</th>
+                <th></th>
+                <th>Total trabalhado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="col-md-2">{{records.length}} dias</td>
+                <td class="col-md-7"></td>
+                <td class="col-md-2">{{totalWorked}}</td>
+                <td class="col-md-1"></td>
+            </tr>
+        </tbody>
+    </table>
+</nav>

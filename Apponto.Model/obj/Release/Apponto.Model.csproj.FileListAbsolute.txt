@@ -3,3 +3,8 @@ C:\Desenvolvimento\Junior\Faculdade\Apponto\Apponto\Apponto.Model\bin\Release\Ap
 C:\Desenvolvimento\Junior\Faculdade\Apponto\Apponto\Apponto.Model\obj\Release\Apponto.Model.csprojResolveAssemblyReference.cache
 C:\Desenvolvimento\Junior\Faculdade\Apponto\Apponto\Apponto.Model\obj\Release\Apponto.Model.dll
 C:\Desenvolvimento\Junior\Faculdade\Apponto\Apponto\Apponto.Model\obj\Release\Apponto.Model.pdb
+C:\Windows\bkp\Documents\GitHub\calculator-teste\Apponto.Model\bin\Release\Apponto.Model.dll
+C:\Windows\bkp\Documents\GitHub\calculator-teste\Apponto.Model\bin\Release\Apponto.Model.pdb
+C:\Windows\bkp\Documents\GitHub\calculator-teste\Apponto.Model\obj\Release\Apponto.Model.csprojResolveAssemblyReference.cache
+C:\Windows\bkp\Documents\GitHub\calculator-teste\Apponto.Model\obj\Release\Apponto.Model.dll
+C:\Windows\bkp\Documents\GitHub\calculator-teste\Apponto.Model\obj\Release\Apponto.Model.pdb
