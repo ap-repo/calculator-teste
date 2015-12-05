@@ -1,4 +1,4 @@
-﻿var appontoWeb = angular.module('appontoWeb', ['ui.router', 'ui.bootstrap', 'ngAnimate', 'ngCookies', 'ngTouch', 'uiGmapgoogle-maps', 'angular-loading-bar', 'checklist-model', 'toaster']);
+﻿var appontoWeb = angular.module('appontoWeb', ['ui.router', 'ui.bootstrap', 'ngAnimate', 'ngCookies', 'ngTouch', 'uiGmapgoogle-maps', 'angular-loading-bar', 'checklist-model', 'toaster', 'ngSanitize', 'ui.select']);
 
 appontoWeb.service('APIInterceptor', ['$q', '$rootScope', 'toaster', function ($q, $rootScope, toaster) {
     var service = this;
@@ -178,7 +178,7 @@ appontoWeb.config(['$stateProvider', '$urlRouterProvider', '$httpProvider', '$lo
                 requireLogin: true
             }
         })
-    .state('location', {
+    .state('localizacao', {
         url: '/localizacao',
         controller: 'LocationController',
         templateUrl: 'views/location.html',
@@ -209,6 +209,14 @@ appontoWeb.config(['$stateProvider', '$urlRouterProvider', '$httpProvider', '$lo
             url: '/relatorio',
             controller: 'ReportController',
             templateUrl: 'views/report.html',
+            data: {
+                requireLogin: true
+            }
+        })
+        .state('relatorioAdministrativo', {
+            url: '/relatorioAdministrativo',
+            controller: 'ReportAdministratorController',
+            templateUrl: 'views/reportAdministrator.html',
             data: {
                 requireLogin: true
             }
@@ -260,14 +268,6 @@ appontoWeb.config(['$stateProvider', '$urlRouterProvider', '$httpProvider', '$lo
                 requireLogin: true
             }
         })
-        .state('usuario.relatorio', {
-            url: '/relatorio',
-            controller: 'ReportController',
-            templateUrl: 'views/report.html',
-            data: {
-                requireLogin: true
-            }
-        })
         .state('sair', {
             url: 'autenticacao/entrar',
             controller: 'LogoutController',
@@ -287,15 +287,57 @@ appontoWeb.config(function (uiGmapGoogleMapApiProvider) {
     });
 })
 
+appontoWeb.config(function (uiSelectConfig) {
+    uiSelectConfig.theme = 'bootstrap';
+});
+
+appontoWeb.filter('propsFilter', function () {
+    return function (items, props) {
+        var out = [];
+
+        if (angular.isArray(items)) {
+            items.forEach(function (item) {
+                var itemMatches = false;
+
+                var keys = Object.keys(props);
+                for (var i = 0; i < keys.length; i++) {
+                    var prop = keys[i];
+                    var text = props[prop].toLowerCase();
+                    if (item[prop] != null && item[prop].toString().toLowerCase().indexOf(text) !== -1) {
+                        itemMatches = true;
+                        break;
+                    }
+                }
+
+                if (itemMatches) {
+                    out.push(item);
+                }
+            });
+        } else {
+            // Let the output be the input untouched
+            out = items;
+        }
+
+        return out;
+    };
+});
+
+appontoWeb.filter('trust', ['$sce', function($sce){
+    return function(text) {
+        return $sce.trustAsHtml(text);
+    };
+}]);
+
 appontoWeb.controller('BaseController', function ($scope, $state, $location, UserService) {
 
     //de acordo com perfil, montar o menu
     $scope.baseMenuList = [
         { Name: 'Principal', Route: 'principal', Order: 1, Active: true, Icon: 'fa fa-home' },
-        { Name: 'Minha Localização', Route: 'location', Order: 2, Active: false, Icon: 'fa fa-map-marker' },
+        { Name: 'Minha Localização', Route: 'localizacao', Order: 2, Active: false, Icon: 'fa fa-map-marker' },
         { Name: 'Relatório', Route: 'relatorio', Order: 3, Active: false, Icon: 'fa fa-list' },
-        { Name: 'Configuração', Route: 'configuracao', Order: 4, Active: false, Icon: 'fa fa-cogs' },
-        { Name: 'Sair', Route: 'sair', Order: 5, Active: false, Icon: 'fa fa-sign-out' }
+        { Name: 'Relatório Administrativo', Route: 'relatorioAdministrativo', Order: 4, Active: false, Icon: 'fa fa-list' },
+        { Name: 'Configuração', Route: 'configuracao', Order: 5, Active: false, Icon: 'fa fa-cogs' },
+        { Name: 'Sair', Route: 'sair', Order: 6, Active: false, Icon: 'fa fa-sign-out' }
     ]
 
     $scope.go = function (baseMenu) {

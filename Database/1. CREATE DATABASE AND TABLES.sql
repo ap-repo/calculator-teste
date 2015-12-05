@@ -100,6 +100,7 @@ CREATE TABLE tb_user (
   ds_lastname VARCHAR(100),
   id_user_superior INTEGER,
   tb_company_id_company INTEGER NULL,
+  ds_photo VARCHAR(250),
   PRIMARY KEY(id_user),
   FOREIGN KEY(tb_sector_id_sector)
     REFERENCES tb_sector(id_sector),
@@ -162,14 +163,15 @@ INSERT INTO tb_permission_group VALUES (3, 'Menu Usuário')
 
 INSERT INTO tb_permission VALUES (1, 1, 'Registro de ponto', 'principal', 1)
 INSERT INTO tb_permission VALUES (2, 1, 'Relatório', 'relatorio', 2)
-INSERT INTO tb_permission VALUES (3, 1, 'Configuração', 'configuracao', 3)
-INSERT INTO tb_permission VALUES (4, 1, 'Sair', 'sair', 4)
-INSERT INTO tb_permission VALUES (5, 2, 'Perfil', 'configuracao.perfil', 1)
-INSERT INTO tb_permission VALUES (6, 2, 'Funcionários', 'configuracao.funcionario', 2)
-INSERT INTO tb_permission VALUES (7, 2, 'Permissões', 'configuracao.permissao', 3)
-INSERT INTO tb_permission VALUES (8, 3, 'Restrição', 'usuario.restricao', 1)
-INSERT INTO tb_permission VALUES (9, 3, 'Nível de Acesso', 'usuario.acesso', 2)
-INSERT INTO tb_permission VALUES (10, 3, 'Relatório', 'usuario.relatorio', 3)
+INSERT INTO tb_permission VALUES (3, 1, 'Relatório Administrativo', 'relatorioAdministrativo', 3)
+INSERT INTO tb_permission VALUES (4, 1, 'Configuração', 'configuracao', 4)
+INSERT INTO tb_permission VALUES (5, 1, 'Sair', 'sair', 5)
+INSERT INTO tb_permission VALUES (6, 2, 'Perfil', 'configuracao.perfil', 1)
+INSERT INTO tb_permission VALUES (7, 2, 'Funcionários', 'configuracao.funcionario', 2)
+INSERT INTO tb_permission VALUES (8, 2, 'Permissões', 'configuracao.permissao', 3)
+INSERT INTO tb_permission VALUES (9, 3, 'Restrição', 'usuario.restricao', 1)
+INSERT INTO tb_permission VALUES (10, 3, 'Nível de Acesso', 'usuario.acesso', 2)
+
 
 INSERT INTO tb_access_level_permission VALUES (1, 1)
 INSERT INTO tb_access_level_permission VALUES (1, 2)
@@ -177,17 +179,12 @@ INSERT INTO tb_access_level_permission VALUES (1, 3)
 INSERT INTO tb_access_level_permission VALUES (1, 4)
 INSERT INTO tb_access_level_permission VALUES (1, 5)
 INSERT INTO tb_access_level_permission VALUES (1, 6)
---INSERT INTO tb_access_level_permission VALUES (1, 7) permissoes ainda não existe
-INSERT INTO tb_access_level_permission VALUES (1, 8)
+INSERT INTO tb_access_level_permission VALUES (1, 7)
 INSERT INTO tb_access_level_permission VALUES (1, 9)
 INSERT INTO tb_access_level_permission VALUES (1, 10)
 
 INSERT INTO tb_access_level_permission VALUES (2, 1)
 INSERT INTO tb_access_level_permission VALUES (2, 2)
-INSERT INTO tb_access_level_permission VALUES (2, 3)
 INSERT INTO tb_access_level_permission VALUES (2, 4)
 INSERT INTO tb_access_level_permission VALUES (2, 5)
-
---ATRIBUIR PERMISSAO ADMINISTRADOR
-INSERT INTO tb_user_access_level VALUES (1, 1)
-INSERT INTO tb_user_access_level VALUES (3, 2)
+INSERT INTO tb_access_level_permission VALUES (2, 6)

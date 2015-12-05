@@ -138,6 +138,7 @@
     <Content Include="App\controllers\configurationEmployeeController.js" />
     <Content Include="App\controllers\configurationPermissionController.js" />
     <Content Include="App\controllers\configurationProfileController.js" />
+    <Content Include="App\controllers\reportAdministratorController.js" />
     <Content Include="App\controllers\userAccessLevelController.js" />
     <Content Include="App\controllers\userRestrictionController.js" />
     <Content Include="App\controllers\locationController.js" />
@@ -156,6 +157,7 @@
     <Content Include="App\references\javascripts\angular-google-maps.min.js" />
     <Content Include="App\references\javascripts\angular-loading-spinner.js" />
     <Content Include="App\references\javascripts\angular-resource.js" />
+    <Content Include="App\references\javascripts\angular-sanitize.min.js" />
     <Content Include="App\references\javascripts\angular-touch.min.js" />
     <Content Include="App\references\javascripts\angular-ui-router.js" />
     <Content Include="App\references\javascripts\angular-ui-router.min.js" />
@@ -165,6 +167,7 @@
     <Content Include="App\references\javascripts\loading-bar.js" />
     <Content Include="App\references\javascripts\lodash.min.js" />
     <Content Include="App\references\javascripts\moment.js" />
+    <Content Include="App\references\javascripts\select.min.js" />
     <Content Include="App\references\javascripts\toaster.js" />
     <Content Include="App\references\javascripts\ui-bootstrap-tpls-0.13.0.min.js" />
     <Content Include="App\references\stylesheets\animations\ng-view-animation.css" />
@@ -172,11 +175,13 @@
     <Content Include="App\references\stylesheets\font-awesome.min.css" />
     <Content Include="App\references\stylesheets\jquery.mobile-1.4.5.min.css" />
     <Content Include="App\references\stylesheets\loading-bar.css" />
+    <Content Include="App\references\stylesheets\select.min.css" />
     <Content Include="App\references\stylesheets\toaster.css" />
     <Content Include="App\views\configuration.html" />
     <Content Include="App\views\configurationEmployee.html" />
     <Content Include="App\views\configurationPermission.html" />
     <Content Include="App\views\configurationProfile.html" />
+    <Content Include="App\views\reportAdministrator.html" />
     <Content Include="App\views\userAccessLevel.html" />
     <Content Include="App\views\userRestriction.html" />
     <Content Include="App\views\location.html" />

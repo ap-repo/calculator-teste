@@ -136,6 +136,9 @@ namespace Apponto.Service
             if (tbRegister.vl_gmt != null)
                 register.Gmt = (int)tbRegister.vl_gmt;
 
+            if (tbRegister.tb_user != null)
+                register.User = new UserModel() { Id = tbRegister.tb_user.id_user, Name = tbRegister.tb_user.ds_name, LastName = tbRegister.tb_user.ds_lastname, Email = tbRegister.tb_user.ds_email };
+
             return register;
         }
     }

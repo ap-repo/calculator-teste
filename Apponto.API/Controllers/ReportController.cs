@@ -13,6 +13,7 @@ namespace Apponto.API.Controllers
     public class ReportController : ApiController
     {
         RegisterService registerService = new RegisterService();
+        UserService userService = new UserService();
 
         [Route("{userId}/between")]
         [HttpGet]
@@ -32,6 +33,43 @@ namespace Apponto.API.Controllers
             {
                 return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex);
             }
+        }
+
+        [Route("consolidated/between")]
+        [HttpGet]
+        public HttpResponseMessage Get(string startDate, string endDate, [FromUri] IList<int> userId)
+        {
+            try
+            {
+                List<ConsolidatedResult> ret = new List<ConsolidatedResult>();
+
+                foreach (int id in userId)
+                {
+                    List<RegisterModel> registers = registerService.LoadBetween(DateTime.Parse(startDate), DateTime.Parse(endDate), id, true);
+
+                    var results = registers.GroupBy(x => x.Date.ToShortDateString())
+                                  .Select(grp => new { Key = grp.Key, List = grp.OrderBy(x => x.Date).ToList(), Worked = totalRegisterWorked(grp.OrderBy(x => x.Date).ToList()) })
+                                  .ToList();
+
+                    ConsolidatedResult consolidateResult = new ConsolidatedResult();
+                    consolidateResult.User = userService.Get(id);
+                    consolidateResult.Results = results;
+
+                    ret.Add(consolidateResult);
+                }
+
+                return Request.CreateResponse(HttpStatusCode.OK, ret);
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex);
+            }
+        }
+
+        private class ConsolidatedResult
+        {
+            public UserModel User { get; set; }
+            public Object Results { get; set; }
         }
 
         private double totalRegisterWorked(List<RegisterModel> ret) {
