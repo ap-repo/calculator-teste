@@ -34,7 +34,7 @@ namespace Apponto.Service
                     + "Nós estamos muito felizes em te receber. O Apponto é uma plataforma brasileira de registro de ponto web e mobile. Aqui você poderá registrar e organizar seus horários, visualizar relatórios e o melhor, tudo na palma da sua mão."
                     + " <br><br> <b>Estas são algumas informações sobre sua conta que você precisa guardar: </b><br>"
                     + "E-mail: " + user.Email+"<br><br>"
-                    + "Você pode fazer o login na sua conta <a href src='http://52.26.53.47:8080/App/#/autenticacao/entrar'>clicando aqui</a>.";
+                    + "Você pode fazer o login na sua conta <a href src='http://app.apponto.net/App/#/autenticacao/entrar'>clicando aqui</a>.";
 
             message.IsBodyHtml = true;
 

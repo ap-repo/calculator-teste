@@ -27,6 +27,7 @@ namespace Apponto.Service
                 configuration.ConfigurationLimitation = configurationLimitation;
 
                 user.Configuration = configurationService.Add(configuration);
+                user.Gmt = -3;
                 #endregion
 
                 tb_user tbUser = ToDbModel(user);
@@ -193,6 +194,7 @@ namespace Apponto.Service
             tbUser.ds_name = user.Name;
             tbUser.ds_lastname = user.LastName;
             tbUser.id_identification = user.Identification;
+            tbUser.vl_gmt = user.Gmt;
 
             tbUser.tb_sector_id_sector = 1; //TODO: Trocar o 1 para referencia da tabela setor
 

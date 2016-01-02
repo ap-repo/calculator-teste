@@ -87,9 +87,9 @@
                     </div>
                 </td>
                 <td class="col-md-2">{{result.Worked}}</td>
-                <td class="col-md-1"><a data-toggle="collapse" style="cursor:pointer;" data-target="#collapse{{result.WorkedMilliseconds}}{{record.User.Id}}" ng-click="showDetails(result)">Detalhes</a></td>
+                <td class="col-md-1"><a data-toggle="collapse" style="cursor:pointer;" data-target="#collapse{{result.WorkedMilliseconds}}{{record.User.Id}}{{$index}}" ng-click="showDetails(result)">Detalhes</a></td>
             </tr>
-            <tr class="collapse" id="collapse{{result.WorkedMilliseconds}}{{record.User.Id}}">
+            <tr class="collapse" id="collapse{{result.WorkedMilliseconds}}{{record.User.Id}}{{$index}}">
                 <td colspan="4">
                     <div class="col-sm-3" ng-repeat="register in result.List">
                         <div>
