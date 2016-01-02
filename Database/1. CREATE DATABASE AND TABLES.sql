@@ -24,6 +24,7 @@ CREATE TABLE tb_permission (
   ds_permission VARCHAR(100),
   ds_route VARCHAR(50),
   vl_order INT NOT NULL,
+  ds_icon VARCHAR(50),
   PRIMARY KEY(id_permission),
   FOREIGN KEY(tb_permission_group_id_permission_group)
     REFERENCES tb_permission_group(id_permission_group)
@@ -161,30 +162,32 @@ INSERT INTO tb_permission_group VALUES (1, 'Menu Principal')
 INSERT INTO tb_permission_group VALUES (2, 'Menu Configuração')
 INSERT INTO tb_permission_group VALUES (3, 'Menu Usuário')
 
-INSERT INTO tb_permission VALUES (1, 1, 'Registro de ponto', 'principal', 1)
-INSERT INTO tb_permission VALUES (2, 1, 'Relatório', 'relatorio', 2)
-INSERT INTO tb_permission VALUES (3, 1, 'Relatório Administrativo', 'relatorioAdministrativo', 3)
-INSERT INTO tb_permission VALUES (4, 1, 'Configuração', 'configuracao', 4)
-INSERT INTO tb_permission VALUES (5, 1, 'Sair', 'sair', 5)
-INSERT INTO tb_permission VALUES (6, 2, 'Perfil', 'configuracao.perfil', 1)
-INSERT INTO tb_permission VALUES (7, 2, 'Funcionários', 'configuracao.funcionario', 2)
-INSERT INTO tb_permission VALUES (8, 2, 'Permissões', 'configuracao.permissao', 3)
-INSERT INTO tb_permission VALUES (9, 3, 'Restrição', 'usuario.restricao', 1)
-INSERT INTO tb_permission VALUES (10, 3, 'Nível de Acesso', 'usuario.acesso', 2)
+INSERT INTO tb_permission VALUES (1, 1, 'Principal', 'principal', 1, 'fa fa-home')
+INSERT INTO tb_permission VALUES (2, 1, 'Minha Localização', 'localizacao', 2, 'fa fa-map-marker')
+INSERT INTO tb_permission VALUES (3, 1, 'Relatório', 'relatorio', 3, 'fa fa-list')
+INSERT INTO tb_permission VALUES (4, 1, 'Relatório Administrativo', 'relatorioAdministrativo', 4, 'fa fa-list')
+INSERT INTO tb_permission VALUES (5, 1, 'Configuração', 'configuracao', 5, 'fa fa-cogs')
+INSERT INTO tb_permission VALUES (6, 1, 'Sair', 'sair', 6, 'fa fa-sign-out')
+INSERT INTO tb_permission VALUES (7, 2, 'Perfil', 'configuracao.perfil', 1, '')
+INSERT INTO tb_permission VALUES (8, 2, 'Funcionários', 'configuracao.funcionario', 2, '')
+INSERT INTO tb_permission VALUES (10, 3, 'Restrição', 'usuario.restricao', 1, '')
+INSERT INTO tb_permission VALUES (11, 3, 'Nível de Acesso', 'usuario.acesso', 2, '')
 
-
+--ADMIN
 INSERT INTO tb_access_level_permission VALUES (1, 1)
 INSERT INTO tb_access_level_permission VALUES (1, 2)
-INSERT INTO tb_access_level_permission VALUES (1, 3)
 INSERT INTO tb_access_level_permission VALUES (1, 4)
 INSERT INTO tb_access_level_permission VALUES (1, 5)
 INSERT INTO tb_access_level_permission VALUES (1, 6)
 INSERT INTO tb_access_level_permission VALUES (1, 7)
-INSERT INTO tb_access_level_permission VALUES (1, 9)
+INSERT INTO tb_access_level_permission VALUES (1, 8)
 INSERT INTO tb_access_level_permission VALUES (1, 10)
+INSERT INTO tb_access_level_permission VALUES (1, 11)
 
+--USER
 INSERT INTO tb_access_level_permission VALUES (2, 1)
 INSERT INTO tb_access_level_permission VALUES (2, 2)
-INSERT INTO tb_access_level_permission VALUES (2, 4)
+INSERT INTO tb_access_level_permission VALUES (2, 3)
 INSERT INTO tb_access_level_permission VALUES (2, 5)
 INSERT INTO tb_access_level_permission VALUES (2, 6)
+INSERT INTO tb_access_level_permission VALUES (2, 7)

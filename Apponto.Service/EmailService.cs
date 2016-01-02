@@ -39,10 +39,11 @@ namespace Apponto.Service
             message.IsBodyHtml = true;
 
             SmtpClient smtp = new SmtpClient();
-            smtp.Host = "smtp.gmail.com";
+            smtp.Host = "send.one.com";
 
-            smtp.Port = 587;
-            smtp.Credentials = new System.Net.NetworkCredential("atendimentoapponto@gmail.com", "qwert123@");
+            smtp.UseDefaultCredentials = true;
+            smtp.Port = 25;
+            smtp.Credentials = new System.Net.NetworkCredential("atendimento@apponto.net", "!Jlagj030793");
 
             smtp.EnableSsl = true;
 

@@ -54,11 +54,15 @@ appontoWeb.factory('UserService', function ($cookieStore, $http, SystemService) 
             var permissions = [];
             $.each(UserService.getUser().AccessLevel, function (index, item) {
                 $.each(item.Permissions, function (index, item) {
-                    if (!$.contains(permissions, item) && item.PermissionGroup.Id == group) permissions.push(item);
+                    if (!_.isObject(_.find(permissions, function (val) { return _.isEqual(item.Id, val.Id) })) && item.PermissionGroup.Id == group) permissions.push(item);
                 });
             });
 
-            return permissions;
+            return permissions.sort(function (a, b) {
+                if (a.Order < b.Order) return -1;
+                if (a.Order > b.Order) return 1;
+                return 0;
+            })
         }
         else return new Array();
     };
@@ -329,23 +333,13 @@ appontoWeb.filter('trust', ['$sce', function($sce){
 }]);
 
 appontoWeb.controller('BaseController', function ($scope, $state, $location, UserService) {
+    $scope.$on('$stateChangeStart', function (event, toState, toParams) {
+        var permissions = UserService.getRoles(1); //2 : Menu Configurações
 
-    //de acordo com perfil, montar o menu
-    $scope.baseMenuList = [
-        { Name: 'Principal', Route: 'principal', Order: 1, Active: true, Icon: 'fa fa-home' },
-        { Name: 'Minha Localização', Route: 'localizacao', Order: 2, Active: false, Icon: 'fa fa-map-marker' },
-        { Name: 'Relatório', Route: 'relatorio', Order: 3, Active: false, Icon: 'fa fa-list' },
-        { Name: 'Relatório Administrativo', Route: 'relatorioAdministrativo', Order: 4, Active: false, Icon: 'fa fa-list' },
-        { Name: 'Configuração', Route: 'configuracao', Order: 5, Active: false, Icon: 'fa fa-cogs' },
-        { Name: 'Sair', Route: 'sair', Order: 6, Active: false, Icon: 'fa fa-sign-out' }
-    ]
+        $scope.baseMenuList = permissions;
 
-    $scope.go = function (baseMenu) {
-        $.each($scope.baseMenuList, function () {
-            this.Active = false;
-        });
-
-        baseMenu.Active = true;
-        $state.go(baseMenu.Route);
-    };
+        $scope.go = function (baseMenu) {
+            $state.go(baseMenu.Route);
+        };
+    });
 })

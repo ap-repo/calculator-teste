@@ -10,7 +10,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   </PropertyGroup>
   <ItemGroup>
     <File Include="App/app.js">
-      <publishTime>10/29/2015 03:18:13</publishTime>
+      <publishTime>12/10/2015 20:32:10</publishTime>
     </File>
     <File Include="App/controllers/configurationController.js">
       <publishTime>10/02/2015 22:45:10</publishTime>
@@ -39,8 +39,11 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="App/controllers/registerController.js">
       <publishTime>10/02/2015 22:45:10</publishTime>
     </File>
+    <File Include="App/controllers/reportAdministratorController.js">
+      <publishTime>12/04/2015 14:15:03</publishTime>
+    </File>
     <File Include="App/controllers/reportController.js">
-      <publishTime>11/06/2015 14:44:26</publishTime>
+      <publishTime>12/04/2015 14:04:24</publishTime>
     </File>
     <File Include="App/controllers/signInController.js">
       <publishTime>10/02/2015 22:45:10</publishTime>
@@ -64,7 +67,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/02/2015 22:45:10</publishTime>
     </File>
     <File Include="App/Index.html">
-      <publishTime>10/29/2015 03:18:19</publishTime>
+      <publishTime>12/03/2015 22:02:48</publishTime>
     </File>
     <File Include="App/references/fonts/fontawesome-webfont.eot">
       <publishTime>10/02/2015 22:45:10</publishTime>
@@ -102,6 +105,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="App/references/javascripts/angular-route.js">
       <publishTime>05/22/2015 18:55:43</publishTime>
     </File>
+    <File Include="App/references/javascripts/angular-sanitize.min.js">
+      <publishTime>12/03/2015 22:01:07</publishTime>
+    </File>
     <File Include="App/references/javascripts/angular-touch.min.js">
       <publishTime>10/02/2015 22:45:10</publishTime>
     </File>
@@ -135,6 +141,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="App/references/javascripts/moment.js">
       <publishTime>10/02/2015 22:45:10</publishTime>
     </File>
+    <File Include="App/references/javascripts/select.min.js">
+      <publishTime>10/31/2015 18:10:10</publishTime>
+    </File>
     <File Include="App/references/javascripts/toaster.js">
       <publishTime>10/02/2015 22:45:10</publishTime>
     </File>
@@ -162,6 +171,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="App/references/stylesheets/loading-bar.css">
       <publishTime>10/02/2015 23:22:01</publishTime>
     </File>
+    <File Include="App/references/stylesheets/select.min.css">
+      <publishTime>10/31/2015 18:10:10</publishTime>
+    </File>
     <File Include="App/references/stylesheets/toaster.css">
       <publishTime>10/02/2015 22:45:10</publishTime>
     </File>
@@ -187,10 +199,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/02/2015 22:45:10</publishTime>
     </File>
     <File Include="App/views/register.html">
-      <publishTime>10/02/2015 23:10:41</publishTime>
+      <publishTime>12/05/2015 19:12:28</publishTime>
     </File>
     <File Include="App/views/report.html">
       <publishTime>11/06/2015 15:41:46</publishTime>
+    </File>
+    <File Include="App/views/reportAdministrator.html">
+      <publishTime>12/04/2015 14:17:47</publishTime>
     </File>
     <File Include="App/views/signIn.html">
       <publishTime>10/02/2015 22:45:10</publishTime>
@@ -211,7 +226,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/02/2015 22:45:14</publishTime>
     </File>
     <File Include="bin/Apponto.Web.dll">
-      <publishTime>11/06/2015 17:50:32</publishTime>
+      <publishTime>12/10/2015 23:02:12</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>05/23/2015 23:52:11</publishTime>

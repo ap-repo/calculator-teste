@@ -27,6 +27,9 @@ namespace Apponto.Database
 
         public int vl_order { get; set; }
 
+        [StringLength(50)]
+        public string ds_icon { get; set; }
+
         public virtual tb_permission_group tb_permission_group { get; set; }
 
         public virtual ICollection<tb_access_level> tb_access_level { get; set; }

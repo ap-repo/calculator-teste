@@ -17,6 +17,7 @@ namespace Apponto.Model
             tbPermission.ds_permission = permission.Name;
             tbPermission.ds_route = permission.Route;
             tbPermission.vl_order = permission.Order;
+            tbPermission.ds_icon = permission.Icon;
             if (permission.PermissionGroup != null)
                 tbPermission.tb_permission_group_id_permission_group = permission.PermissionGroup.Id;
             
@@ -31,6 +32,7 @@ namespace Apponto.Model
             permission.Name = tbPermission.ds_permission;
             permission.Route = tbPermission.ds_route;
             permission.Order = tbPermission.vl_order;
+            permission.Icon = tbPermission.ds_icon;
             permission.PermissionGroup = new PermissionGroupModel() { Id = tbPermission.tb_permission_group.id_permission_group };
             
             return permission;

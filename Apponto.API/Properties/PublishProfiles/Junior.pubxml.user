@@ -13,16 +13,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/02/2015 22:45:14</publishTime>
     </File>
     <File Include="bin/Apponto.API.dll">
-      <publishTime>11/06/2015 17:50:19</publishTime>
+      <publishTime>12/10/2015 23:01:07</publishTime>
     </File>
     <File Include="bin/Apponto.Database.dll">
-      <publishTime>11/06/2015 17:50:16</publishTime>
+      <publishTime>12/10/2015 23:01:05</publishTime>
     </File>
     <File Include="bin/Apponto.Model.dll">
-      <publishTime>11/06/2015 17:50:16</publishTime>
+      <publishTime>12/10/2015 23:01:05</publishTime>
     </File>
     <File Include="bin/Apponto.Service.dll">
-      <publishTime>11/06/2015 17:50:17</publishTime>
+      <publishTime>12/10/2015 23:01:06</publishTime>
     </File>
     <File Include="bin/de/Microsoft.Data.Edm.resources.dll">
       <publishTime>10/02/2015 22:45:13</publishTime>
@@ -178,7 +178,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/02/2015 22:45:09</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>11/06/2015 17:50:20</publishTime>
+      <publishTime>12/10/2015 23:01:08</publishTime>
     </File>
   </ItemGroup>
 </Project>

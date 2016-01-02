@@ -103,6 +103,10 @@ namespace Apponto.Database
                 .Property(e => e.ds_route)
                 .IsUnicode(false);
 
+            modelBuilder.Entity<tb_permission>()
+                .Property(e => e.ds_icon)
+                .IsUnicode(false);
+
             modelBuilder.Entity<tb_permission_group>()
                 .Property(e => e.ds_permission_group)
                 .IsUnicode(false);

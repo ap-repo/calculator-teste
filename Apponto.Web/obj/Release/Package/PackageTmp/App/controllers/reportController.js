@@ -1,6 +1,4 @@
-﻿appontoWeb.controller('ReportController', function ($scope, $state, $http, $stateParams, $timeout, UserService, SystemService) {
-    var userId = $stateParams.userId;
-
+﻿appontoWeb.controller('ReportController', function ($scope, $state, $http, $timeout, UserService, SystemService) {
     $scope.today = function () {
         $scope.startDate = new Date();
         $scope.endDate = new Date();
@@ -85,7 +83,7 @@
     }
 
     $scope.getReport = function () {
-        var userSearch = (userId !== undefined) ? userId : UserService.getUser().Id;
+        var userSearch = UserService.getUser().Id;
         $http({
             url: SystemService.apiUrl + 'api/report/' + userSearch + '/between/?startDate=' + moment($scope.startDate).format('YYYY/MM/DD') + '&endDate=' + moment($scope.endDate).format('YYYY/MM/DD'),
             method: 'GET'

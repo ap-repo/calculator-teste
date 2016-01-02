@@ -16,6 +16,7 @@ namespace Apponto.Model
         public string Name { get; set; }
         public string Route { get; set; }
         public int Order { get; set; }
+        public string Icon { get; set; }
 
         public PermissionGroupModel PermissionGroup { get; set; }
     }
